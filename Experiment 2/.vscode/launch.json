@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "OpenOCD: Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceRoot}/build/Project1.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f1x.cfg"
+            ],
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 20
+            },
+            "preLaunchTask": "CMake: build"
+        }
+    ]
+}
